@@ -1,0 +1,77 @@
+DOM MANIPULATION
+
+SELECTING ELEMENTS IN THE DOM
+
+getElementById()
+
+const title = document.getElementById('main-heading');
+
+getElemtByClassName()
+
+const listItem = document.getElementById('listItems');
+
+getElementsByTagName()
+
+const listItem = document.getElementByTagname('li');
+
+querySelector()
+
+const container = document.querySelector('div');
+
+querySelectorALL()
+
+const container = document.querySelectorAll('div');
+
+-----------------------------------------------------------------
+ MANIPULATION OF ELEMENTS
+
+---Styling Elements---
+Select and store element:
+  const title = document.querySelector('#main-heading');
+Change attribute in element object:
+  title.style.color = 'red';
+
+*can't use inline style on multiple elements must loop throught them changing each individual element by them self. So wen arrays are return then loop must be used
+
+---Creating Elements---
+Select and store element:
+  const ul = document.querySelector('ul');
+Only creates the element in the variable
+  const li = document.createElement('li');
+Add variable element to html:
+  ul.append(li);
+
+---Modify Text in Element---
+Select and Store element
+
+console.log(element.innerText); "Simple write text down"
+console.log(element.textContent); "Put content of text down in content like if span or strong is used"
+console.log(element.innerHTML); "Put content down in the HTML format"
+
+*be careful to use innerHTML as security
+
+---Modifying Attributes and Classes---
+
+Attributes:
+li.setAttribute('Type of attribute like id', 'name of type attribute like id name');
+li.removeAttribute('id');
+li.getAttribute('id');
+
+Classes:
+li.classList.add('list-items');
+li.classList.remove('list-items');
+li.classList.contains('list-items');
+
+---Remove Elements---
+
+li.remove();
+
+-------------------------------------------------------------------
+NAVIGATING THE DOM
+
+
+
+
+
+
+
