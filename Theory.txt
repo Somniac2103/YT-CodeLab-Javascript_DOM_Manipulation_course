@@ -69,6 +69,61 @@ li.remove();
 -------------------------------------------------------------------
 NAVIGATING THE DOM
 
+Transversing the DOM
+let ul = document.querySelector('ul');
+
+Parent node Traversal:
+console.log(ul.parentNode);
+console.log(ul.parentElement);
+Grand Parent node*
+console.log(ul.parentNode.parentNode);
+console.log(ul.parentElement.parentElement);
+
+Child node Traversal:
+console.log(ul.childNode);
+console.log(ul.childElement);
+console.log(ul.firstChild);
+console.log(ul.lastChild);
+console.log(ul.childNodes[1]);
+console.log(ul.children);
+console.log(ul.firstElementChild);
+console.log(ul.lastElementChild)
+
+Sibling Node Traversal:
+*don't need to same tag 
+console.log(ul.previousSibling);
+console.log(ul.nextSibling);
+console.log(ul.previousElementSibling);
+console.log(ul.nextElementSibling);
+
+----------------------------------------------------------------
+EVENT LISTENERS
+
+inline: onclick = ""
+
+external: element.addEvent Listerner("click", function, boolean);
+
+Mouseover, on
+
+Event Probagation:
+  3 Phases
+  -Event Capturing
+  -Target
+  -Event Bubbling
+
+Boolean feature
+e = eventobject
+
+-if false the event will bubbling up otherwise the event will stay at the bottom when true.
+-can add e.stopPropagation() to stop the Probagation
+-can add the {once: true} to only let that event run once.
+-can add e.preventDefault()
+
+Event Delegation:
+e.target for child element that is being effected.
+document.querySelector('#football').addEventListener('click', function(e){
+  console.log('football is clicked');
+})
 
 
 
